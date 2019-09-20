@@ -1,0 +1,515 @@
+\documentclass[twocolumn, letterpaper, 10pt, twoside]{article}
+%\usepackage[english]{babel} % English language/hyphenation
+\usepackage{amsmath,amsfonts,amsthm} % Math packages
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{pdfpages}
+\usepackage{amssymb}
+\usepackage{url}
+\usepackage{tabu}
+\usepackage{tikz} 
+\usepackage{pgfplotstable}
+\usepackage{pgfplots}
+\usepackage{ragged2e}
+
+\usepackage[hmarginratio=1:1,top=32mm,left=18mm,columnsep=20pt]{geometry} % Document margins
+
+\usepackage{titlesec}
+\usepackage{abstract}
+\usepackage{booktabs} % Horizontal rules in tables
+\usepackage{float} % Required for tables and figures in the multi-column environment - they need to be placed in specific locations with the [H] (e.g. \begin{table}[H])
+\usepackage{paralist} % Used for the compactitem environment which makes bullet points with less space between them
+\usepackage{enumitem} % \begin{itemize}[noitemsep]
+\usepackage{parskip}
+\setlength{\parindent}{3mm}
+\setlength\tabcolsep{4pt}
+\usepackage[labelsep=period]{caption}
+\captionsetup[table]{name= \bfseries{TABLE}}
+\renewcommand{\thetable}{\bfseries\Roman{table}}
+
+%\newcommand{\horrule}[1]{\rule{\linewidth}{#1}} % Create horizontal rule command with 1 argument of height
+\usepackage{fancyhdr} % Headers and footers
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhead{} % Blank out the default header
+%\fancyfoot{} % Blank out the default footer
+
+\renewcommand{\thesection}{\Roman{section}} 
+\renewcommand{\thesubsection}{\thesection.\Roman{subsection}}
+
+\titleformat{\section}{\large\normalfont\bfseries\centering}{\thesection}{}{}
+\titlespacing{\section}{0pt}{4pt}{0pt}
+\titleformat{\subsection}{\normalsize\normalfont\it\bfseries\centering}{\thesubsection}{}{}
+\titleformat{\subsubsection}{\small\normalfont\bf}{\thesubsection}{}{}
+
+\renewcommand{\abstractname}{}    % clear the title
+\renewcommand{\absnamepos}{empty} % originally center, stops loss of space
+%----------------------------------------------------------------------------------------
+%       My Commands
+%----------------------------------------------------------------------------------------
+%\renewcommand{\arraystretch}{1.2}
+\makeatletter
+\g@addto@macro\@floatboxreset\centering
+\makeatother
+%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------------
+\newcommand{\coursenum}{326}
+\newcommand{\thetitle}{Experiment 32:\\Charge Oscillations and Energy Transfers in LRC Circuits} 
+
+\rhead{Physics 326 \\ Experiment 32}
+\lhead{Austin Beauchamp \\ V00825419 }
+\rfoot{Department of Physics and Astronomy}
+\lfoot{University of Victoria}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt}
+%\fancyfoot[LE,RO]{\thepage} % Custom footer text
+%----------------------------------------------------------------------------------------
+%       TITLE SECTION
+%----------------------------------------------------------------------------------------
+\title{\vspace{-10mm}\fontsize{15pt}{10pt}\selectfont\textbf{\thetitle}\vspace{-3mm}} % Article title
+\author{
+	\large
+	{\textsc{Austin Beauchamp, University of Victoria}}\\[-7mm]}
+\date{Submitted September 23rd, 2019}
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+	\twocolumn[
+	\begin{@twocolumnfalse}
+		\maketitle
+		\thispagestyle{fancy} % All pages have headers and footers
+		\vspace{-3mm}
+		\begin{abstract}
+			\section*{Abstract}
+			
+			Yeet
+
+     \end{abstract}
+\vspace{7mm}
+\end{@twocolumnfalse}
+]
+
+    \section*{I. Introduction}
+ 
+ An LRC circuit consists of an inductor (L), resistor (R), and a capacitor (C) connected in series. This creates a harmonic oscillator and has many applications in modern electronics in the form of signal filters. Forming an oscillator, and LRC circuit will have intrinsic wavelike properties, a resonant frequency and damping characteristics.  
+ Applying a voltage to the circuit results in a gradual response. The nature of the capacitor requires voltage buildup, so the reaction to the voltage takes time. The capacitors' energy storage in the electric field influences the inductors' magnetic field. 
+ 
+ 
+ \begin{equation}
+ V_o = V_L + V_C + V_R
+ \end{equation}
+ 
+ Where $V_o$ is the total voltage, $V_C$ is the voltage in the capacitor, $V_R$ is the voltage in the resistor, and $V_L$ is the voltage in the inductor. And, 
+ 
+  \begin{equation}
+ V_o = L\frac{di}{dt} + iR + \frac{q}{C}
+ \end{equation}
+ 
+ Where q is the charge in the capacitor at any time t, and i is the current. With a closed switch, the voltage will change over time. This allows for each element in the circuit to be expresssed in their time dependent forms as a second order differential: 
+ 
+ \begin{equation}
+L\frac{d^2i}{dt^2} + R\frac{di}{dt} + \frac{i}{C} = 0
+ \end{equation}  
+ 
+ If we assume the solution of the differential equation to be of the form $i = Ae^{st}$ where A and s are unknown constants and substitute this back into the equation directly above we get: 
+ 
+   \begin{equation}
+Ae^{st}(Ls^2 + Rs + \frac{1}{C}) = 0 
+ \end{equation}
+ 
+ The expression in the parentheses must be zero since neither A nor $e^{st}$ vanishes. So, solving for s gives: 
+ 
+  \begin{equation}
+s = -\frac{R}{2L} \pm \sqrt{\frac{R^2}{4L^2} - \frac{1}{LC}}
+ \end{equation}
+ 
+ This gives two possible values of s; $s_1$ and $s_2$. The complete solution to the second order differential equation, equation (3), is: 
+ 
+   \begin{equation}
+i = Ae^{s_1t} + Be^{s_2t}
+ \end{equation}
+ 
+ Where A and B are two arbitrary constants that are determined by the initial conditions. There are three possible solutions for equation (5) depending on wherether the value under the square root is positive, zero, or negative. These solutions are: 
+ 
+ \textbf{\underline{Case 1:} Overdamping}
+ 
+\begin{equation}
+(\frac{R}{2L})^2 - \frac{1}{LC} > 0 
+\end{equation}
+
+Both $s_1$ and $s_2$ are real, and the current of the discharge of the capacitor is aperiodic. The solution to equation (6) is then: 
+
+   \begin{equation}
+i = e^{-\frac{R}{2L}t}(Ae^{\omega t} + Be^{-\omega t})
+\end{equation}
+
+Where, the natural angular frequency of the circuit, $\omega$,  is: 
+
+   \begin{equation}
+\omega = \sqrt{\frac{R^2}{4L^2} - \frac{1}{LC}}
+\end{equation}
+  
+\textbf{\underline{Case 2:} Critical Damping}
+
+\begin{equation}
+(\frac{R}{2L})^2 = \frac{1}{LC}
+\end{equation}
+
+Here the aperiodic discharge is most rapid, and $s_1$ and $s_2$ are equal, so only one distinct solution exists, with one arbitrary constant. The general solution in this case in then in the form of: 
+
+   \begin{equation}
+i = e^{-\frac{R}{2L}t}(A + Bt)
+\end{equation}
+
+When $\omega$ = 0. Since $i = Ae^{-\frac{R}{2L}t}$ and $i = Bte^{-\frac{R}{2L}t}$ are  solutions of equation (3), their sum must also be a solution. So, taking into account the initial conditions, the current in then given by: 
+
+   \begin{equation}
+i = \frac{-V_o}{L}te^{-\frac{R}{2L}t}
+\end{equation}
+
+Where $-V_0$ is the emf applied by the capacitor at time t = 0s. 
+
+\textbf{\underline{Case 3:} Underdamping}
+
+   \begin{equation}
+(\frac{R}{2L})^2 < \frac{1}{LC}
+\end{equation}
+
+Here, the discharge is oscillatory (periodic), and $s_1$ and $s_2$ are complex. So the solution then becomes:
+
+   \begin{equation}
+i = e^{-\frac{R}{2L}t}(Ae^{j\omega t} + Be^{-j\omega t})
+\end{equation}
+
+The voltage seen across the inductor is: 
+
+   \begin{equation}
+v_L = V_0(1 - \frac{R}{2L}t)e^{-\frac{R}{2L}t}
+\end{equation}
+
+The voltage seen across the resistor is: 
+
+   \begin{equation}
+v_R = i \cdot R_{Resistor} = \frac{-V_0}{L}te^{-\frac{R}{2L}t} \cdot R_{Resistor}
+\end{equation}
+
+And the voltage seen across the capacitor is: 
+
+   \begin{equation}
+v_C = V_0(1 - \frac{2}{RC}t)e^{-\frac{R}{2L}t}
+\end{equation}
+
+In these equations, L and C are the inductance and capacitance of the circuit respectively (constant values taken from the apparatus at the start of the experiment). R is the resistance of the resistor, which is dependent on the case, and $V_0$ is the voltage, which is about 3.9 V. 
+
+The natural frequency (in Hertz) of oscillation of the circuit in the absense of damping is: 
+
+ \begin{equation}
+f = \frac{1}{2\pi}\sqrt{\frac{1}{LC}}
+\end{equation}
+
+Where the values L and C are the same as stated directly above. When damping is small the amplitude of the oscillations decays slowly. 
+
+Refering back to when the battery is connected to the circuit, the relation between the applied voltage $V_0$ and the current i is as given in equation (2). Since $i = dq / dt$, the rate at which work is done (ie. the output power of the battery) is given by: 
+
+ \begin{equation}
+V_0i = Li\frac{di}{dt} + Ri^2 + \frac{dq}{dt}\frac{q}{C}
+\end{equation}
+
+The work done in a time interval, $\Delta t = t_1 - t_2$, in wihc the current changes from $i_1$ to $i_2$, and the charge on the capacitance from $q_1$ to $q_2$ is: 
+
+ \begin{equation}
+W = \int_{t_1}^{t_2}Vidt = \frac{1}{2}L(i_2^2 - i_1^2) + \int_{t_1}^{t_2}Ri^2dt + \frac{1}{2C}(q_2^2 - q_1^2)
+\end{equation}
+
+Where W represents the work done by the battery. After the applied voltage is suddenly brought to 0V through approporiate switching, W = 0 , so: 
+
+ \begin{equation}
+0 =  \frac{1}{2}L(i_2^2 - i_1^2) + \int_{t_1}^{t_2}Ri^2dt + \frac{1}{2C}(q_2^2 - q_1^2)
+\end{equation}
+
+The integral of $Ri^2$ is the energy dissipated as heat in the resistance. The first term and the second term of equation (20) above are the energy stored in the inductance and capacitance respectively. If we consider a small time interval $\Delta t = t_{n+1} - t_n, \Delta t << T$, where T is the period of oscillation and n is an integer. The energy dissipated in the resistance during this interval is then given by: 
+
+ \begin{equation}
+E_H(\bar{t}) = \int_{t_n}^{t_{n+1}}Ri^2dt \approx R(I^2)_{AV}\Delta t
+\end{equation}
+
+Where $\bar{t}$ is the midpoint of the small time interval, and I is obtained using Ohm's law from the values of $R_{Resistor}$ and $v_R$, that is: 
+
+ \begin{equation}
+I = (\frac{v_R}{R_{Resistor}})^2
+\end{equation}
+
+The inductor and capacitor also contain definite amounts of energy at time $\bar{t}$ and these are given by: 
+
+ \begin{equation}
+E_L = \frac{1}{2}Li^2 
+\end{equation}
+
+Where $i = V_R / R_{Resistor}$. And:
+
+ \begin{equation}
+E_C = \frac{1}{2}Cv_C^2 
+\end{equation} 
+
+Which allow the evaluation of energy states and transfers during a discharging event in an underdamped LRC circuit. In these cases, $v_C$ and $v_R$ are from the raw data collected on LoggerPro. 
+
+
+ \subsection*{III.I. Apparatus}
+    The apparatus for this experiment consisted of:
+    \begin{itemize}
+    	\item Inductor 
+    	\item Capacitor 
+    	\item Resistor box
+    	\item Power supply 
+    	\item LabPro with differential probes 
+    	\item Computer 
+        \end{itemize}
+    
+   {\centering\textbf{See Figure 1: Apparatus in the Appendix.}}\par
+   
+   \subsection*{III.II. Procedure}
+   
+   
+   \indent\indent To begin this experiment, the resistance and the inductance of the inductor, and the capacitance of the capacitor were measured and recorded. The LabPro's differential voltage probes were also zeroed as they are subjected to thermal drift. In order to zero this apparatus, each probe was shorted by connected it to its respective ground clip (ie. connecting the red and the black alligator clips for each of the three channels). Then, in the LoggerPro software, \textit{Experiment $\rightarrow$ zero...}  were selected, and the apparatus was then zeroed. Before the function generator was connected to the circuit, it was set to a square wave output with minimum of 0 V and maximum of about +4 V. The square-wave frequency was set to be sufficicently low ($\sim$ 5 Hertz) to later allow a clear observation of the transient response in each half - cycle. 
+   
+   The channel 1 probe was then connected to the function generator. On the LoggerPro software, under \textit{Experiment $\rightarrow$ Data Collection} the \textit{Experiment Length} was set to $\sim$10 s, the \textit{Repeat} mode was also chosen to obtain a 'live' display, and a sampling rate of $\sim$ 100/s was also selected. The offset on the function generator was then adjusted for a 0 V signal baseline.
+   
+   The voltage probes were once again zeroed, and then the function generator and other compononents of the apparatus was then connected as shown in Figure 1. (Schematic of apparatus used in the experiments as per the physics 326 lab manual.) The decade resistance box was initially set to 0 $\Omega$. The software's sweep time setting (the length of the data run, in seconds) and sampling rate was then experimented with for optimal results. The sampling rate was set to 3000/s, and the range for "length" was set to $10^{-2}$. The waveform baseline was ensured to be as close to 0 V as possible, and the maximum was positive.  The trigger point was set to Channel 1 in order to take advantage of the initial negative spike that occurs across the inductor. To do this, on the main menu, \textit{Experiment $\rightarrow$ Data Collection $\rightarrow$ Triggering} were selected, and then on Channel 11 the trigger settings were set to "decreasing", and a negative trigger voltage was choosen that provides an unambiguous starting point for data collection. 
+   
+   \textbf{\underline{Case 1:} Overdamping}
+   
+   To begin, the voltage probes were zeroed. Equation (\textbf{10}) was rearranged and solved (see Sample Calculations section in the Results part of this experiment) in order to find an appropriate value for the critical resistance. This value was doubled to select a value for R appropriate for an overdamped case. Using this value, and the values for the resistance for the inductor and the function generator, $R_{resistor}$ was determined using $R_{resistor} = R - R_L - R_{FG}$. The resistance box was set accordingly for this value of $R_{resistor}$. A discharge event was then captured, and the graph of $v_c$ versus t was printed (see Figure 2). 
+   
+      \textbf{\underline{Case 2:} Critical Damping}
+      
+      The voltage probes were zeroed. $R_{resistor}$ was recalculated using the original value for the critical resistance calculated from equation (\textbf{10}) , the values  for the resistance for the inductor and the function generator, and $R_{resistor} = R - R_L - R_{FG}$. The resistance box was set accordingly for this value of $R_{resistor}$. A discharge event was captured. On a single graph, the discharge curve was plotted across the capacitor and across the resistor as a function of time. On the same graph, the theoretical curve of $v_C$ (using equation \textbf{16}), as well as the theoretical curve of $v_R$ (using equation \textbf{16}), as a function of time were also plotted (see Figure 3). 
+      
+      Next, the energy behaviour of a critically damped LRC circuit  undergoing a discharge was analyzed using the data of CASE 2. In LoggerPro, calculated columns were created to produce the next plot, much like for the theoretical curves of the last plot. The equations used for these calculated columns were introduced in the theory portion of this experiment, but no sample calculations for these equations will be provided as they are literally just chug and plug. The first columns created where that of the instantaneous energy levels for the inductor ($E_L$) and capacitor ($E_C$) using equations (\textbf{24}) and (\textbf{25}) respectively. Another column was created of the addition of these two quantities, which represents the total energy ($E_T$). Next, another column for the heat dissipated bythe resistor in an interval $t_{n + 1} - t_n$ using equation (\textbf{22}) was created ($E_H$). In yet another column, an integral of the heat already dissipated was produced by using the SUM($E_H$) function ($E_{HT}$). The curves of $E_L$, $E_C$), $E_T$, $E_{HT}$, and $E_{CONSERVATIVE}$ ($E_{CONSERVATIVE} = E_T + E_{HT}$) were plotted as a function of time on the same page (Figure 4). 
+      
+       \textbf{\underline{Case 3:} Underdamping}
+       
+       The voltage probes were zeroed. A value of 15$\Omega$ was chosen for the resistance of $R_{resistor}$ which produces a classical underdamped oscillatory discharge. A simultaneous discharge curve was obtained for the three circuit elements as a function of time (Figure 5).  
+       
+       The frequency of oscillation was measured and compared to my results with the value based on equation (\textbf{18}) using a formal consistency check (see Sample Calculations section in the Results part of this experiment). An expression for frequency that is appropriate for non-vanishing circuit resistance was also obtained as well as a value for the natural frequency of oscillation. These values were also compared using a consistency check. 
+       
+       Lastly, using the equations mentioned in CASE 2, another graph of $E_L$, $E_C$), $E_T$, $E_{HT}$, and $E_{CONSERVATIVE}$ were plotted as function of time for CASE 3 (see Figure 6).
+ 
+    \section*{IV. Data}
+
+\begin{table} [H] 
+	\centering
+	\tabulinesep=1.5mm
+	\begin{tabu} { | X[c] | X[c] | }
+		
+		\hline \centering
+		
+		$R_{Fuction Generator}$, R & (50 $\pm$ 0.1) $\Omega$ \\
+		\centering
+		$R_{Inductor}$, R & (88.5 $\pm$ 0.1) $\Omega$ \\
+		\centering
+		Inductor, L & (0.991 $\pm$ 0.001) H \\
+		\centering
+		Capacitor, C & (10.15 $\pm$ 0.01) $\mu$F \\
+		\hline
+		
+   \end{tabu}
+	\captionsetup{width=.8\linewidth}
+	\vspace{-1mm}
+	\caption{Relevant data of constants either given in the experiment (on the apparatus), or measured at the start of the experiment.}
+	
+\end{table}
+
+\begin{table} [H] 
+	\centering
+	\tabulinesep=1.3mm
+	\begin{tabu} { | X[c] | X[c] | X[c] |}
+		
+		\hline \centering
+		
+		\textbf{Case} & \textbf{$R_{Resistor}$} & \textbf{R} \\
+		\hline \centering
+		1 & 1111.98 $\pm$ 2.08 & 1250.48 $\pm$ 1.88 \\
+		\centering
+		2 & 486.74 $\pm$ 2.08 & 625.24 $\pm$ 1.88 \\
+		\centering
+		3 & 153.5 $\pm$ 0.2 & 15 \\
+		\hline
+		
+	\end{tabu}
+	\captionsetup{width=.8\linewidth}
+	\vspace{-1mm}
+	\caption{All values are in units of $\Omega$. $R_{Resistor}$ is obtained through the equation introduced in the procedure,  $R_{resistor} = R - R_L - R_{FG}$. R is obtained from equation (\textbf{32.6}) for cases 1 and 2, and given in the procedure for case 3.}
+	
+\end{table}
+
+\section*{V. Results}
+
+\textit{\underline{Sample Calculations}:}
+
+From equation (\textbf{10}): 
+\begin{equation*}
+(\frac{R}{2L})^2 = \frac{1}{LC}
+\end{equation*}
+
+Rearranging this gives, 
+
+\begin{equation*}
+R = 2L\sqrt{\frac{1}{LC}}
+\end{equation*}
+
+Plugging in L = $(0.991 \pm 0.101\%)$ H and C = $(10.15 \pm 0.0985\%)$ $\mu$F into the above equation gives, 
+
+\textbf{R = (625.24 $\pm$ 0.301 \%) $\Omega$} 
+
+(This is R for case 2, for case 1 it is double this value.)
+
+Now that we know R, $R_L$, and $R_{Function Generator}$, lets do one sample calculation for $R_{Resistor}$ (for Case 1): 
+
+\centering{$R_{Resistor} = R - R_L - R_{Function Generator}$
+
+$= (1250.48 \pm 1.88) - (50 \pm 0.1) - (88.5 \pm 0.1)$
+
+\textbf{$R_{Resistor}$ = 1111.98 $\pm$ 2.08 $\Omega$ }
+
+(Note, here the uncertainties will be added.)}
+
+For Case 3, from Figure 3, the frequency of oscillation was measured (as seen on Figure 5): 
+
+\begin{equation*}
+f_0 = \frac{1}{T} = \frac{1}{0.028 - 0.008}
+\end{equation*}
+$f_0 = (50 \pm 0.001)Hz$
+
+The theoretical value of the frequency of oscillation was calculated using equation (\textbf{18}):
+
+\begin{equation*}
+f = \frac{1}{2\pi}\sqrt{\frac{1}{LC}}
+\end{equation*} 
+
+The values for L and C from Table I were plugged into this equation to give: 
+
+$f = 50.21 Hz \pm 0.1995\% = (50.21 \pm 0.1002) Hz $
+
+These two values, f and $f_0$ were compared using a formal consistency check: 
+
+\begin{equation*}
+|50.21 - 50| \leq |0.1002 + 0.001|
+\end{equation*}
+\begin{equation*}
+0.21 \nleq 0.1003 
+\end{equation*}
+
+$\therefore$ Not consistent! 
+
+Lastly, an expression for frequency for non-vanishing circuit resistance was used as an alternative way to find another theoretical value for the natural frequency of oscillation using equation (\textbf{9}): 
+
+\begin{equation*}
+w = \sqrt{\frac{R^2}{4L^2} - \frac{1}{LC}}
+\end{equation*} 
+
+And $w = f_02\pi$. Rearraging these two equations for $f_0$, we get: 
+
+\begin{equation*}
+f_0 = \frac{1}{2\pi} \sqrt{\frac{R^2}{4L^2} - \frac{1}{LC}}
+\end{equation*}
+
+Using the values for L and C from Table I, and R for Case 3 from Table II, we get: 
+
+$f_0 = (50.193 \pm 0.0501) Hz$
+
+Once again using a consistency check on this $f_0$ value and the one from Graph 5 above we get: 
+
+\begin{equation*}
+|50.193 - 50| \leq |0.0501|
+\end{equation*}
+\begin{equation*}
+0.193 \leq 0.0501
+\end{equation*}
+
+$\therefore$ Consistent! 
+
+    \section*{VI. Discussion}
+
+Comparing the experimental discharge across the capacitor for both figures 2 and 3, demonstrates the effects of $\omega$. The larger $\omega$ values cause the exponential decay of the voltage to take a longer amount of time.  Figure 3 also compares both the theoretical and experimental values of both $v_R$ and $v_C$. It's important to note here that in this experiment we treated the wires in the circuit as super conductors, ie. having no real resistance. Of course this is not true, and the wires do actually contain some amount of resistance. The higher the resistance in the circuit, the longer the discharge. This explains why their is a slight difference in between the theoretical and experimental curves in figure 3. 
+
+The relationship between $E_T$ and $E_{HT}$ is nearrly inverse. This is dueto how the components of the circuit work, both the inductor and the capcitor lose energy over time. The capacitor is losing its overall voltage as time increases (as seen in figures 2 and 3 as well), and the inductor (while having no initial charge) quickly gains a voltage but with a current in the opposite direction. To charge an inductor a current must be passed through, which creates a magnetic field which induces a current in the opposite direction. As the capacitor loses its voltage, it lowers its energy. The inductor energy is proportional to the square of the voltage across the resistor, which is less than and opposite to the capacitor potential. As the square of a small number is a small number, the inductor energy is much smaller than the capacitor energy, but due to the square is always positive. $E_L$ and $E_C$, as seen in figure 4, decay down to zero. At t = 0, all the energy is stored in the capacitor. As time progresses, this energy dissipates following an exponential decay. At the same time, after the experiement is started, some energy gets stored in the magnetic field of the inductor but eventually goes down to zero as well as the system settles down to a state of zero current. 
+
+$E_T$ starts out at the same location as $E_{CONSERVATIVE}$ and then decay exponential down to zero.. This is unsurprising as $E_T$ is just the sum of $E_C$ and $E_L$ and both of these curves also decay exponential down to zero. $E_{HT}$ measures the heat generated by ohmic heating of the resistor. The resistor gives off more heat over time, so as time goes on $E_{HT}$ increases to a maximum value. $E_{HT}$ and $E_{T}$ are related because as $E_{T}$ decays, $E_{HT}$ must grow. $E_{CONSERVATIVE}$ is defined as the sum of all the energies in the system. As such it will have the maximum value at all times. This is good because if the sum of all the energies was less than the maximum it would literally break all of math and henceforth physics, and then as physicists we would all be sad. 
+
+Based on the two consistency checks done in the sample calculations portion done in this experiment, the second method, ie. obtaining a natural frequency of oscillation, is more consistent with the observation (ie. Figure 5). I suspect this is due to the resistance term being included in the second calculate and not the first which makes the calculation more accurate as in the first calculation, we would be assuming the wires as superconductors, which as explained earlier we know to not be true. 
+
+In Figure 6, $E_C$ and $E_L$ now oscillate instead of decay down to zero. This is due to Case 3 having imaginary solutions, as described in the theory section of the experiment report, so $E_C$ and $E_L$ are proportional to $i^2$. By squaring i, the energies assume real, postive values while still being oscillatory. Yes, $E_T$ and $E_{HT}$ display plateau's at periodic intervals. For $E_T$, these plateau's seem to occur every time $E_C$ is at a local maximum. This suggest that almost no energy is disspated at that instant, thus leaving the total energy present in the system constant in that time interval. The $E_{HT}$ curve has one large gradual plateau. The curve is assuming all heat loss is due to ohmic heating. This assumption can only be used for over and critical damped cases. The underdamped case needs to consisder the effects of the impedance of the circuit as a whole.The $E_{CONSERVATIVE}$  vs t differs in figure 6 from that in figure 3. In figure 6 theres a substantial initial drop that does not appear as evidently in figure 3. This drop is due to the two dominating values $E_C$ and $E_L$ being replaces by $E_{HT}$. 
+
+  
+    \section*{VII. Conclusion}
+   
+   The purpose of this experiment was to study the resonance behaviour of a resistance - capacitor - inductor series circuit in three distinct damping modes. The experimental oscillatory period was calculated to be $f = (50 \pm 0.001) Hz$. This value was proved to be only consistent when not considering the wires within the conductor to be semiconductors (ie. having no resistance). This experiment also demonstrated that the theory of energy conservation is true for this circuit. 
+   
+    
+    \begin{thebibliography}{1}
+        \bibitem{manual}
+            Physics \coursenum~Laboratory Manual,
+            Department of Physics and Astronomy, University of Victoria, 2018.
+    \end{thebibliography}
+
+    \newpage
+     \onecolumn
+    \centering
+
+\newcommand{\comment}[1]{}
+\comment{
+\section*{Appendix}
+ \begin{figure}[h!]
+	\centering
+	\includegraphics[width=.7\linewidth]{ApparatusLab32}
+	\captionsetup{width=.8\linewidth,belowskip=-2mm,aboveskip=1mm}
+	\vspace{0.2cm}
+	\caption{Schematic of apparatus used in this experiment as per the physics 326 lab manual.}
+\end{figure}
+
+\newpage
+\onecolumn
+\centering
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.7\linewidth]{Case1.jpg}
+	\captionsetup{width=.8\linewidth,belowskip=-2mm,aboveskip=1mm}
+	\vspace{0.2cm}
+	\caption{\textbf{Case 1: Overdamping.} The voltage seen across the capacitor as a function of time for a discharge event.}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.7\linewidth]{Case2A.jpg}
+	\captionsetup{width=.8\linewidth,belowskip=-2mm,aboveskip=1mm}
+	\vspace{0.2cm}
+	\caption{\textbf{Case 2: Critical Damping.} The theoretical and experimental curves of the voltage seen across both the capacitor and the resistor as a function of time for a discharge event.}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.7\linewidth]{Case2B.jpg}
+	\captionsetup{width=.8\linewidth,belowskip=-2mm,aboveskip=1mm}
+	\vspace{0.2cm}
+	\caption{\textbf{Case 2: Critical Damping.} The instantaneous energy levels for the inductor (Energy Inductor), capacitor (Energy Capacitor), the addition of these two quantities (Total Energy), the heat already dissipated by the resistor(Heat Integral), and the addition of the heat already dissipated by the resistor and the heat disspated by the resistor in a time interval (E Conservative) plotted as a function of time.}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.7\linewidth]{Case3A.jpg}
+	\captionsetup{width=.8\linewidth,belowskip=-2mm,aboveskip=1mm}
+	\vspace{0.2cm}
+	\caption{\textbf{Case 3: Underdamped.} Simultaneous discharge curves for the voltage seen across the capacitor, resistor, and inductor as a function of time.}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=.7\linewidth]{Case3B.jpg}
+	\captionsetup{width=.8\linewidth,belowskip=-2mm,aboveskip=1mm}
+	\vspace{0.2cm}
+	\caption{\textbf{Case 3: Underdamped.} The instantaneous energy levels for the inductor (Energy Inductor), capacitor (Energy Capacitor), the addition of these two quantities (Total Energy), the heat already dissipated by the resistor(Heat Integral), and the addition of the heat already dissipated by the resistor and the heat disspated by the resistor in a time interval (E Conservative) plotted as a function of time.}
+\end{figure}
+}
+\end{document}
