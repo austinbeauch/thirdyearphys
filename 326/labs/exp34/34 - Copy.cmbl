@@ -20,7 +20,7 @@
   <GraphMatchNumSections>0</GraphMatchNumSections>
   <Stationery>0</Stationery>
   <CreationDateTime>2019-11-04 14:24:43</CreationDateTime>
-  <ModifiedDateTime>2019-11-17 00:49:34</ModifiedDateTime>
+  <ModifiedDateTime>2019-11-16 16:22:33</ModifiedDateTime>
   <PageBounds>0 0 9.56944444444 11.1527777778</PageBounds>
   <ScreenResolution>0 0 2735 1823</ScreenResolution>
   <MathType>0</MathType>
@@ -190,11 +190,11 @@
     </PageHelperDataIntegral>
     <PageGraphCartesian>
       <ID>156 </ID>
-      <BroadcastTo>1 270 </BroadcastTo>
+      <BroadcastTo>0 </BroadcastTo>
       <Visible>1</Visible>
-      <Bounds>0.162499196356 1.99476267546 9.33187 10.1319888889 </Bounds>
+      <Bounds>1.1044 2.53851 8.81104 9.65977 </Bounds>
       <SubordinateToID>0</SubordinateToID>
-      <SubordinateOffset>2.50694333333 1.49304888889</SubordinateOffset>
+      <SubordinateOffset>2.09028 1.02083</SubordinateOffset>
       <BackgroundTransparent>0</BackgroundTransparent>
       <BackgroundColor>0xffff 0xffff 0xffff| 0xffff 0xffffffff</BackgroundColor>
       <AddNewData>0</AddNewData>
@@ -212,8 +212,8 @@
         <Name>Arial</Name>
         <Rotation>0</Rotation>
       </Font>
-      <GraphTitle>Magnetic Induction vs Magnetic Field: Initial Phase</GraphTitle>
-      <GraphTitleColor>0x0 0x0 0x0| 0xffff 0x0</GraphTitleColor>
+      <GraphTitle></GraphTitle>
+      <GraphTitleColor>0x0 0x0 0x0| 0xffff 0x2e</GraphTitleColor>
       <GraphShowPoints>0</GraphShowPoints>
       <GraphInterpolate>0</GraphInterpolate>
       <GraphShowTangent>0</GraphShowTangent>
@@ -221,21 +221,21 @@
       <GraphShowCursorStatus>1</GraphShowCursorStatus>
       <GraphShowCursorDelta>1</GraphShowCursorDelta>
       <GraphPlotBaseColumnID>153 </GraphPlotBaseColumnID>
-      <GraphPlotTraceIDPairs>2 153 271 153 166 </GraphPlotTraceIDPairs>
+      <GraphPlotTraceIDPairs>1 153 166 </GraphPlotTraceIDPairs>
       <LogXAxis>0</LogXAxis>
       <LogYAxis>0</LogYAxis>
       <LogRightYAxis>0</LogRightYAxis>
       <GraphShowTraceErrorBars>1</GraphShowTraceErrorBars>
       <GraphShowBaseErrorBars>1</GraphShowBaseErrorBars>
       <GraphShowUncertaintyBoxes>0</GraphShowUncertaintyBoxes>
-      <GraphConnectLines>1</GraphConnectLines>
+      <GraphConnectLines>0</GraphConnectLines>
       <GraphBarGraph>0</GraphBarGraph>
       <BinGraphStackColumns>0</BinGraphStackColumns>
       <GraphShowPointProtectors>0</GraphShowPointProtectors>
       <GraphMajorTickStyle>1</GraphMajorTickStyle>
-      <GraphMajorTickColor>0xc0c0 0xc0c0 0xc0c0| 0xffff 0x0</GraphMajorTickColor>
+      <GraphMajorTickColor>0xc0c0 0xc0c0 0xc0c0| 0xffff 0xffffffff</GraphMajorTickColor>
       <GraphMinorTickStyle>0</GraphMinorTickStyle>
-      <GraphMinorTickColor>0xc0c0 0xc0c0 0xc0c0| 0xffff 0x0</GraphMinorTickColor>
+      <GraphMinorTickColor>0xc0c0 0xc0c0 0xc0c0| 0xffff 0xffffffff</GraphMinorTickColor>
       <GraphPlotXAutoscale>3</GraphPlotXAutoscale>
       <GraphPlotYAutoscale>3</GraphPlotYAutoscale>
       <GraphPlotDoubleYAutoscale>3</GraphPlotDoubleYAutoscale>
@@ -245,70 +245,27 @@
       <GraphPlotXAutoscaleHint>0</GraphPlotXAutoscaleHint>
       <GraphPlotYAutoscaleHint>0</GraphPlotYAutoscaleHint>
       <GraphPlotDoubleYAutoscaleHint>0</GraphPlotDoubleYAutoscaleHint>
-      <GraphPlotXMin>-200</GraphPlotXMin>
+      <GraphPlotXMin>-4000</GraphPlotXMin>
       <GraphPlotXMax>4000</GraphPlotXMax>
       <GraphPlotXTicksRotatedAngle>0</GraphPlotXTicksRotatedAngle>
       <ShowAllValuesAsMajorTicks>0</ShowAllValuesAsMajorTicks>
-      <GraphPlotYMin>-0.02</GraphPlotYMin>
-      <GraphPlotYMax>0.3</GraphPlotYMax>
-      <GraphPlotDefaultXMin>-200</GraphPlotDefaultXMin>
+      <GraphPlotYMin>-0.004</GraphPlotYMin>
+      <GraphPlotYMax>0.003</GraphPlotYMax>
+      <GraphPlotDefaultXMin>-4000</GraphPlotDefaultXMin>
       <GraphPlotDefaultXMax>4000</GraphPlotDefaultXMax>
-      <GraphPlotDefaultYMin>-0.02</GraphPlotDefaultYMin>
-      <GraphPlotDefaultYMax>0.3</GraphPlotDefaultYMax>
+      <GraphPlotDefaultYMin>-40</GraphPlotDefaultYMin>
+      <GraphPlotDefaultYMax>30</GraphPlotDefaultYMax>
       <GraphPlotXLabel></GraphPlotXLabel>
       <GraphPlotYLabel></GraphPlotYLabel>
       <GraphDrawRainbow>0</GraphDrawRainbow>
-      <AudioTraceIDs>2 271 166 </AudioTraceIDs>
+      <AudioTraceIDs>1 166 </AudioTraceIDs>
       <GraphPlotDoubleYAxis>0</GraphPlotDoubleYAxis>
     </PageGraphCartesian>
-    <PageHelperDataCurveFit>
-      <ID>270 </ID>
-      <BroadcastTo>0 </BroadcastTo>
-      <Visible>1</Visible>
-      <Bounds>1.76666586302 3.91837378657 4.15521224974 5.01196753657 </Bounds>
-      <SubordinateToID>156</SubordinateToID>
-      <SubordinateOffset>1.60416666667 1.92361111111</SubordinateOffset>
-      <BackgroundTransparent>0</BackgroundTransparent>
-      <BackgroundColor>0xffff 0xffff 0xffff| 0xffff 0x0</BackgroundColor>
-      <AddNewData>0</AddNewData>
-      <Locked>0</Locked>
-      <AutoCreated>0</AutoCreated>
-      <GraphLinkedIDs>0 </GraphLinkedIDs>
-      <YLinkedIDs>0 </YLinkedIDs>
-      <Font>
-        <Size> 9 </Size>
-        <Justification> 0 </Justification>
-        <VerticalJustification> 0 </VerticalJustification>
-        <Styles> 0 0 0 0 0 0 </Styles>
-        <Family> 3 </Family>
-        <Color>0x0 0x0 0x0| 0xffff 0x0</Color>
-        <Name>Arial</Name>
-        <Rotation>0</Rotation>
-      </Font>
-      <GUIHelperRangeMin>340.782193245</GUIHelperRangeMin>
-      <GUIHelperRangeMax>1294.52447734</GUIHelperRangeMax>
-      <GUIHelperTraceColumnID>166</GUIHelperTraceColumnID>
-      <GUIHelperBaseColumnID>153</GUIHelperBaseColumnID>
-      <GUIHelperPrecision>4</GUIHelperPrecision>
-      <GUIHelperPrecisionDecimal>0</GUIHelperPrecisionDecimal>
-      <GUIHelperMinimized>0</GUIHelperMinimized>
-      <GUIHelperUseEntireRange>0</GUIHelperUseEntireRange>
-      <GUIHelperUnderlyingHistogramFFTColumnID>0</GUIHelperUnderlyingHistogramFFTColumnID>
-      <CurveFitFunctionID>271</CurveFitFunctionID>
-      <CurveFitColumnID>0</CurveFitColumnID>
-      <CurveFitError>0.00261800869016</CurveFitError>
-      <CurveFitMethod>1</CurveFitMethod>
-      <CurveFitUncertainty>0</CurveFitUncertainty>
-      <ManualCurveFitIncrements>0 </ManualCurveFitIncrements>
-      <ManualCurveFitShowRMSE>1</ManualCurveFitShowRMSE>
-      <ManualCurveFitWeightColumnId>4294967295</ManualCurveFitWeightColumnId>
-      <CurveFitCorrelation>0.998062410746</CurveFitCorrelation>
-    </PageHelperDataCurveFit>
     <PageTable>
       <ID>107 </ID>
       <BroadcastTo>0 </BroadcastTo>
       <Visible>1</Visible>
-      <Bounds>0.00378294 0.138892 4.20602 9.17375 </Bounds>
+      <Bounds>0.00378294 0.138892222222 4.20602333333 9.17375 </Bounds>
       <SubordinateToID>0</SubordinateToID>
       <SubordinateOffset>0 0</SubordinateOffset>
       <BackgroundTransparent>0</BackgroundTransparent>
@@ -332,7 +289,7 @@
       <TableColumn> 135 0.797859 </TableColumn>
       <TableColumn> 153 1.00818 </TableColumn>
       <TableColumn> 166 0.687711 </TableColumn>
-      <StartIndex> 0 </StartIndex>
+      <StartIndex> 60 </StartIndex>
       <DisplayBlackAndWhite> 0 </DisplayBlackAndWhite>
     </PageTable>
   </Page>
@@ -433,85 +390,85 @@ Z1 2:
 28.8
 29.3
 29.7
-Z3 1:29.4
-Z3 1:29.2
-Z3 1:29.2
-Z3 1:28.9
-Z3 1:28.8
-Z3 1:28.5
-Z3 1:28.4
-Z3 1:27.9
-Z3 1:27
-Z3 1:26.2
-Z3 1:25.3
-Z3 1:23.4
-Z3 1:21.9
-Z3 1:19.9
-Z3 1:17.7
-Z3 1:14.9
-Z3 1:12.6
-Z3 1:10.3
-Z3 1:7
-Z3 1:4.5
-Z3 1:1.6
-Z3 1:-0.12
-Z3 1:-3.3
-Z3 1:-6.3
-Z3 1:-8.3
-Z3 1:-11
-Z3 1:-13.3
-Z3 1:-15.8
-Z3 1:-17.7
-Z3 1:-19.6
-Z3 1:-21.2
-Z3 1:-23
-Z3 1:-24.2
-Z3 1:-25.7
-Z3 1:-26.9
-Z3 1:-27.9
-Z3 1:-28.4
-Z3 1:-29.1
-Z3 1:-29.4
-Z3 1:-30
-Z3 1:-29.8
-Z3 1:-29.8
-Z3 1:-29.5
-Z3 1:-29.5
-Z3 1:-29.4
-Z3 1:-29.2
-Z3 1:-28.6
-Z3 1:-27.9
-Z3 1:-26.9
-Z3 1:-25.7
-Z3 1:-24.4
-Z3 1:-22.3
-Z3 1:-20.4
-Z3 1:-17.9
-Z3 1:-16.2
-Z3 1:-13.6
-Z3 1:-10.8
-Z3 1:-7.5
-Z3 1:-4.8
-Z3 1:-0.5
-Z3 1:0.3
-Z3 1:3.5
-Z3 1:5.6
-Z3 1:8.6
-Z3 1:10.9
-Z3 1:13
-Z3 1:15.3
-Z3 1:17.6
-Z3 1:19.5
-Z3 1:21.1
-Z3 1:22.9
-Z3 1:24.3
-Z3 1:25.4
-Z3 1:26.4
-Z3 1:27.4
-Z3 1:28.1
-Z3 1:28.7
-Z3 1:29.5
-Z3 1:29.6
+29.4
+29.2
+29.2
+28.9
+28.8
+28.5
+28.4
+27.9
+27
+26.2
+25.3
+23.4
+21.9
+19.9
+17.7
+14.9
+12.6
+10.3
+7
+4.5
+1.6
+-0.12
+-3.3
+-6.3
+-8.3
+-11
+-13.3
+-15.8
+-17.7
+-19.6
+-21.2
+-23
+-24.2
+-25.7
+-26.9
+-27.9
+-28.4
+-29.1
+-29.4
+-30
+-29.8
+-29.8
+-29.5
+-29.5
+-29.4
+-29.2
+-28.6
+-27.9
+-26.9
+-25.7
+-24.4
+-22.3
+-20.4
+-17.9
+-16.2
+-13.6
+-10.8
+-7.5
+-4.8
+-0.5
+0.3
+3.5
+5.6
+8.6
+10.9
+13
+15.3
+17.6
+19.5
+21.1
+22.9
+24.3
+25.4
+26.4
+27.4
+28.1
+28.7
+29.5
+29.6
 </ColumnCells>
     </DataColumn>
     <DataColumn>
@@ -586,92 +543,92 @@ Z1 2:
 6.58583880366
 6.92641352047
 7.26959948742
-Z3 1:6.97022449498
-Z3 1:6.62200945369
-Z3 1:6.2284843869
-Z3 1:5.88379936895
-Z3 1:5.5248975447
-Z3 1:5.15608264123
-Z3 1:4.78649403402
-Z3 1:4.40675056517
-Z3 1:4.00848656294
-Z3 1:3.67226392969
-Z3 1:3.34721164424
-Z3 1:2.93603646079
-Z3 1:2.5449292182
-Z3 1:2.20744931636
-Z3 1:1.81842140258
-Z3 1:1.43321365104
-Z3 1:1.10849986098
-Z3 1:0.751677365539
-Z3 1:0.334070769714
-Z3 1:-0.00568188687001
-Z3 1:-0.38552206869
-Z3 1:-0.737460559243
-Z3 1:-1.09259057774
-Z3 1:-1.47180212527
-Z3 1:-1.84356677426
-Z3 1:-2.20348408467
-Z3 1:-2.52718238857
-Z3 1:-2.93502097462
-Z3 1:-3.29397115536
-Z3 1:-3.66592923029
-Z3 1:-4.00336077564
-Z3 1:-4.40921674585
-Z3 1:-4.76536225051
-Z3 1:-5.13524099663
-Z3 1:-5.46541906938
-Z3 1:-5.89337395278
-Z3 1:-6.22979001197
-Z3 1:-6.63748352857
-Z3 1:-7.00165620958
-Z3 1:-7.12298262793
-Z3 1:-6.59536503101
-Z3 1:-6.28578682044
-Z3 1:-5.93800698751
-Z3 1:-5.52600974383
-Z3 1:-5.18964204113
-Z3 1:-4.84050822665
-Z3 1:-4.44035832155
-Z3 1:-4.01453112344
-Z3 1:-3.71167446415
-Z3 1:-3.34556752379
-Z3 1:-2.97626905548
-Z3 1:-2.56504551554
-Z3 1:-2.22882288229
-Z3 1:-1.81769605532
-Z3 1:-1.52538110954
-Z3 1:-1.16488352132
-Z3 1:-0.774936834343
-Z3 1:-0.37222403559
-Z3 1:-0.00664901655001
-Z3 1:0.35070540021
-Z3 1:0.741135652027
-Z3 1:1.11082097221
-Z3 1:1.4704965002
-Z3 1:1.8646018448
-Z3 1:2.22625998864
-Z3 1:2.55029678792
-Z3 1:2.94009840544
-Z3 1:3.35673787159
-Z3 1:3.70853129269
-Z3 1:4.04726846311
-Z3 1:4.43001003397
-Z3 1:4.78862171931
-Z3 1:5.13736868192
-Z3 1:5.52625152625
-Z3 1:5.90053071241
-Z3 1:6.25488702716
-Z3 1:6.59638051717
-Z3 1:6.96882215694
-Z3 1:7.31486115645
+6.97022449498
+6.62200945369
+6.2284843869
+5.88379936895
+5.5248975447
+5.15608264123
+4.78649403402
+4.40675056517
+4.00848656294
+3.67226392969
+3.34721164424
+2.93603646079
+2.5449292182
+2.20744931636
+1.81842140258
+1.43321365104
+1.10849986098
+0.751677365539
+0.334070769714
+-0.00568188687001
+-0.38552206869
+-0.737460559243
+-1.09259057774
+-1.47180212527
+-1.84356677426
+-2.20348408467
+-2.52718238857
+-2.93502097462
+-3.29397115536
+-3.66592923029
+-4.00336077564
+-4.40921674585
+-4.76536225051
+-5.13524099663
+-5.46541906938
+-5.89337395278
+-6.22979001197
+-6.63748352857
+-7.00165620958
+-7.12298262793
+-6.59536503101
+-6.28578682044
+-5.93800698751
+-5.52600974383
+-5.18964204113
+-4.84050822665
+-4.44035832155
+-4.01453112344
+-3.71167446415
+-3.34556752379
+-2.97626905548
+-2.56504551554
+-2.22882288229
+-1.81769605532
+-1.52538110954
+-1.16488352132
+-0.774936834343
+-0.37222403559
+-0.00664901655001
+0.35070540021
+0.741135652027
+1.11082097221
+1.4704965002
+1.8646018448
+2.22625998864
+2.55029678792
+2.94009840544
+3.35673787159
+3.70853129269
+4.04726846311
+4.43001003397
+4.78862171931
+5.13736868192
+5.52625152625
+5.90053071241
+6.25488702716
+6.59638051717
+6.96882215694
+7.31486115645
 </ColumnCells>
     </DataColumn>
     <DataColumn>
       <ID>153 </ID>
       <BroadcastTo>3 17 107 156 </BroadcastTo>
       <Visible>1</Visible>
-      <DataObjectName>Applied Magnetic Field</DataObjectName>
+      <DataObjectName>H</DataObjectName>
       <DataObjectShortName>H</DataObjectShortName>
       <DataObjectColor>0x0 0x0 0xffff| 0xffff 0xffffffff</DataObjectColor>
       <DataObjectDataSource>155</DataObjectDataSource>
@@ -679,7 +636,7 @@ Z3 1:7.31486115645
       <DataObjectPrecision>3</DataObjectPrecision>
       <DataObjectAutomaticDecimal>0</DataObjectAutomaticDecimal>
       <DataObjectThickLines>1</DataObjectThickLines>
-      <ColumnUnits>A/m</ColumnUnits>
+      <ColumnUnits></ColumnUnits>
       <ColumnProtected>1</ColumnProtected>
       <ColumnUserEditable>1</ColumnUserEditable>
       <ColumnTreatAsText>0</ColumnTreatAsText>
@@ -721,8 +678,8 @@ Z3 1:7.31486115645
       <ID>166 </ID>
       <BroadcastTo>3 17 107 156 </BroadcastTo>
       <Visible>1</Visible>
-      <DataObjectName>Magnetic Induction</DataObjectName>
-      <DataObjectShortName>B</DataObjectShortName>
+      <DataObjectName>Tesla</DataObjectName>
+      <DataObjectShortName>T</DataObjectShortName>
       <DataObjectColor>0x0 0x8b8b 0x4545| 0xffff 0xffffffff</DataObjectColor>
       <DataObjectDataSource>168</DataObjectDataSource>
       <DataObjectPrecisionDecimal>1</DataObjectPrecisionDecimal>
@@ -791,30 +748,6 @@ Z3 1:7.31486115645
       <DataTag>
       </DataTag>
     </Metadata>
-    <FunctionModel>
-      <ID>271 </ID>
-      <BroadcastTo>1 156 </BroadcastTo>
-      <Visible>1</Visible>
-      <DataObjectName>mx+b</DataObjectName>
-      <DataObjectShortName>mx+b</DataObjectShortName>
-      <DataObjectColor>0x0 0x0 0x0| 0xffff 0x0</DataObjectColor>
-      <DataObjectDataSource>0</DataObjectDataSource>
-      <DataObjectPrecisionDecimal>0</DataObjectPrecisionDecimal>
-      <DataObjectPrecision>4</DataObjectPrecision>
-      <DataObjectAutomaticDecimal>0</DataObjectAutomaticDecimal>
-      <DataObjectThickLines>0</DataObjectThickLines>
-      <FunctionModelPower>1</FunctionModelPower>
-      <FunctionModelString>m*x+b</FunctionModelString>
-      <FunctionModelLinear>1</FunctionModelLinear>
-      <FunctionModelType>1</FunctionModelType>
-      <FunctionCoefficientArray>2 0.000120897500016 -0.0206648482874 </FunctionCoefficientArray>
-      <FunctionCoefficientUncertaintyArray>2 4.35145380045e-06 0.00358239364088 </FunctionCoefficientUncertaintyArray>
-      <FunctionModelParameterNames>m
-b
-</FunctionModelParameterNames>
-      <FunctionModelTimeOffset>0</FunctionModelTimeOffset>
-      <FunctionModelTimeOffsetValue>0</FunctionModelTimeOffsetValue>
-    </FunctionModel>
   </DataSet>
   <DataSourceServer>
     <ID>13 </ID>
@@ -833,7 +766,7 @@ b
       <ID>168 </ID>
       <BroadcastTo>1 166 </BroadcastTo>
       <Visible>1</Visible>
-      <CalcEquation>"Gauss"/10^2</CalcEquation>
+      <CalcEquation>"Gauss"/10^4</CalcEquation>
       <CalcOutColumnID>166</CalcOutColumnID>
       <CalcWantNANs>1</CalcWantNANs>
       <CalcEquationEditable>1</CalcEquationEditable>

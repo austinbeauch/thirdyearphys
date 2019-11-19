@@ -76,8 +76,7 @@ def main():
     ### FOR PRODUCING THE VELOCITIES FIGURE FOR THE REPORT. OCCLUDNIG HAPPENS JUST AFTER ###
     if count >= 850: break
     
-    
-    if cv2.waitKey(1) & 0xFF == ord('q'):
+    if cv2.waitKey(0) & 0xFF == ord('q'):
       break
   
   cap.release()
@@ -103,7 +102,6 @@ def main():
 def fit(x, y, i1, i2, deg=1):
   m, b = np.polyfit(x[i1:i2], y[i1:i2], deg)
   return m, b
-
 
 def distance(x, y, d2):
   return np.sqrt((x - d2.x)**2 + (y-d2.y)**2)
