@@ -71,12 +71,12 @@ def main():
         color = (0, 0, 255) 
       raw = cv2.putText(raw, text, (int(drop.x+10), int(drop.y+10)), cv2.FONT_HERSHEY_SIMPLEX , 0.5, color, 1, cv2.LINE_AA) 
     
-    show(original, raw, blur, processed)
+    #show(original, raw, blur, processed)
 
     ### FOR PRODUCING THE VELOCITIES FIGURE FOR THE REPORT. OCCLUDNIG HAPPENS JUST AFTER ###
     if count >= 850: break
     
-    if cv2.waitKey(0) & 0xFF == ord('q'):
+    if cv2.waitKey(1) & 0xFF == ord('q'):
       break
   
   cap.release()
@@ -84,7 +84,7 @@ def main():
  
   for drop in drops:
     if drop.id == 0:
-
+      plt.figure(figsize=(5,5))
       plt.plot(drop._vel)
 
       # hardcoded the intervals because I'm not getting paid to actually make this thing legit (yet)
@@ -93,9 +93,10 @@ def main():
         line = m*np.array(drop._frames[low:high]) + b
         plt.plot(drop._frames[low:high], line, label=f"{round(np.mean(drop._vel[low:high]),3)} mm/s")
 
+      
       plt.title(f"Drop {drop.id}")
       plt.xlabel("Frame")
-      plt.ylabel("Velocity")
+      plt.ylabel("Velocity (mm/s)")
       plt.legend()
       plt.show()
 

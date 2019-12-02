@@ -24,18 +24,20 @@ def psi_t(x, y, z, t, alpha=0):
     hbar = 1.05*10**-34
     return magsq(sqrt(4/5)*psi_200(x,y,z)*exp(-1j*E(2)*t/hbar) +  exp(1j*alpha)*sqrt(1/5)*psi_210(x,y,z)*exp(-1j*E(2)*t/hbar))
 
-t = linspace(0, 25, 30)
-dom = linspace(-10, 10, 10)
-x, z, t = meshgrid(dom, dom, t)
-G = psi_t(x,0,z,t)
 
-
+dom = linspace(-10, 10, 1000)
+x, z = meshgrid(dom, dom)
+G = psi(x,0,z)
+t = 0
 fig, ax = plt.subplots(figsize=(6, 6))
-cax = ax.pcolormesh(x[:-1, :-1, 0], z[:-1, :-1, 0], G[:-1, :-1, 0], vmin=-10, vmax=10, cmap='gray')
-fig.colorbar(cax)
+plt.pcolormesh(x,z,G, vmin=0, vmax=0.0014, cmap='gray')
 
 def animate(i):
-    cax.set_array(G[:-1, :-1, i].flatten())
+    a = i % (2*pi)
+    G = psi(x,0,z, alpha=a)
+    plt.pcolormesh(x, z, G, vmin=0, vmax=0.0014, cmap='gray')
+    plt.title(f"frame {i}")
+    # cax.set_array(G[:-1, :-1].flatten())
 
-anim = animation.FuncAnimation(fig, animate, interval=100, frames=29, repeat=False)
+anim = animation.FuncAnimation(fig, animate, interval=100, frames=1000, repeat=True)
 plt.show()
